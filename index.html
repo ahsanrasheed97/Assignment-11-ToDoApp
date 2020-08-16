@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To do app</title>
+    <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-database.js"></script>
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+          apiKey: "AIzaSyAkj5VIHe9wv5SMirFRQpJM_4eYM-_oMJQ",
+          authDomain: "assignment-9-todolist.firebaseapp.com",
+          databaseURL: "https://assignment-9-todolist.firebaseio.com",
+          projectId: "assignment-9-todolist",
+          storageBucket: "assignment-9-todolist.appspot.com",
+          messagingSenderId: "29725882556",
+          appId: "1:29725882556:web:f67c7c05c47ac1e79438b9",
+          measurementId: "G-J6LVMRJ43C"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        
+      </script>   
+   
+</head>
+<body>
+    <h1>To Do List</h1>
+    <style>
+        body {
+            
+        font-weight: bold;
+            color: whitesmoke;
+            background-color: rgb(128,128,128)
+;
+            text-align: center;
+        }
+        .btn { 
+            margin:5px;
+            background-color: whitesmoke;
+        }
+        .btn:hover{
+            background-color:  rgb(128,128,128);
+            color: whitesmoke;
+        }
+        .inp{
+            
+            box-sizing: border-box;
+            border: transparent;
+            background-color: whitesmoke;
+        }
+       
+    </style>
+    <body>
+        <div>
+            <input class="inp" placeholder="Enter todo" type="text" id="todo-item">
+            <button class="btn" onclick="addTodo()">ADD ITEM</button>
+            <button class="btn" onclick="deleteAll()">DELETE ALL</button>
+        </div>
+    
+        <div >
+            <ul id="list">
+              
+            </ul>
+        </div>
+      
+        <script src="app.js"></script>    
+ 
+</body>
+
+
+</html>
